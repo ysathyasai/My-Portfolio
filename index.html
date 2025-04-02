@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🙂 ysathyasai-portfolio 🙂</title>
+    <meta name="description" content="Lovable Generated Project">
+    <meta property="og:image" content="/og-image.png">
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <script>
+        let myEmojis = ["🙂", "😊", "😃", "😆", "😁", "😐", "😕", "🙁", "🫤", "😢", "🥹", "😏", "😯", "😮", "😐", "🙂"];
+        let index = 0;
+
+        function urlAnimate() {
+            let emoji = myEmojis[index];
+            window.location.hash = emoji;
+            document.title = `${emoji} ysathyasai-portfolio ${emoji}`;
+            index = (index + 1) % myEmojis.length;
+            setTimeout(urlAnimate, 900);
+        }
+
+        urlAnimate();
+    </script>
+</body>
+</html>
